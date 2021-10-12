@@ -12,6 +12,7 @@ class RootViewController: UIViewController, PrimeiraCelulaModelCallBack {
     //Protocolos das celulas
     func acaoCliqueCard() {
         print("clicou no card")
+        //Vou tentar enviar para uma nova tela
     }
     
 
