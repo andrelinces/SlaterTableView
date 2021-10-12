@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RootViewController: UIViewController, PrimeiraCelulaModelCallBack {
+class PrincipalRootViewController: UIViewController, PrimeiraCelulaModelCallBack {
   
     //Protocolos das celulas
     func acaoCliqueCard() {
