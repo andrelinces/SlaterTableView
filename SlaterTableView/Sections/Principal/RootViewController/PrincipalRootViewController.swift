@@ -13,6 +13,12 @@ class PrincipalRootViewController: UIViewController, PrimeiraCelulaModelCallBack
     func acaoCliqueCard() {
         print("clicou no card")
         //Vou tentar enviar para uma nova tela
+        performSegue(withIdentifier: "segueCard1" , sender: nil)
+        //let testeRecupera = dataSource.data.description
+        //let recuperatable = tableView.indexPathForSelectedRow
+        //print(recuperatable)
+        
+        
     }
     
 
@@ -24,6 +30,7 @@ class PrincipalRootViewController: UIViewController, PrimeiraCelulaModelCallBack
         super.viewDidLoad()
 
         setupTableView()
+        
     }
     
 

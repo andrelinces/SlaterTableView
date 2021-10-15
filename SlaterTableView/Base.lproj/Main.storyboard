@@ -11,7 +11,7 @@
         <!--Principal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PrincipalRootViewController" customModule="SlaterTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="PrincipalRootViewController" customModule="SlaterTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,11 +34,43 @@
                     <navigationItem key="navigationItem" id="x7z-rb-iB3"/>
                     <connections>
                         <outlet property="tableView" destination="Xey-cc-hSn" id="d3Q-wc-wEu"/>
+                        <segue destination="jCz-yO-Wgv" kind="show" identifier="segueCard1" id="OP8-9k-F0r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839.1304347826087" y="78.348214285714278"/>
+            <point key="canvasLocation" x="3029" y="78"/>
+        </scene>
+        <!--Card1 View Controller-->
+        <scene sceneID="T5x-fx-5a1">
+            <objects>
+                <viewController id="jCz-yO-Wgv" customClass="Card1ViewController" customModule="SlaterTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jiw-KV-STS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jsg-tP-oxZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6NA-Zh-uqt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6NA-Zh-uqt" firstAttribute="trailing" secondItem="Jsg-tP-oxZ" secondAttribute="trailing" id="Dey-kN-Whg"/>
+                            <constraint firstItem="Jsg-tP-oxZ" firstAttribute="leading" secondItem="6NA-Zh-uqt" secondAttribute="leading" id="JgB-0Y-xHY"/>
+                            <constraint firstItem="Jsg-tP-oxZ" firstAttribute="top" secondItem="Jiw-KV-STS" secondAttribute="top" id="MSq-zj-m7A"/>
+                            <constraint firstAttribute="bottom" secondItem="Jsg-tP-oxZ" secondAttribute="bottom" id="cR3-20-n5c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KcY-Wa-lNh"/>
+                    <connections>
+                        <outlet property="tableView" destination="Jsg-tP-oxZ" id="UHp-Zm-rgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RP0-hu-55Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3933" y="87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xpa-h4-bKd">
@@ -93,6 +125,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="a1n-cS-r7g"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U8d-sf-XqF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -1,58 +1,62 @@
 //
-//  PrimeiraCelulaModel.swift
+//  Card1Model.swift
 //  SlaterTableView
 //
-//  Created by Andre Linces on 12/10/21.
+//  Created by Andre Linces on 14/10/21.
 //
 
 import UIKit
 
-protocol PrimeiraCelulaModelCallBack: class {
+protocol Card1ModelCallBack: class {
     
     func acaoCliqueCard ()
     
 }
 
-class PrimeiraCelulaModel: tableViewCompatible {
-    internal init(delegate: PrimeiraCelulaModelCallBack?, tituloCard: String) {
+class Card1Model: tableViewCompatible {
+    internal init(delegate: Card1ModelCallBack?, tituloCard: String) {
         self.delegate = delegate
         self.tituloCard = tituloCard
     }
     
-    open weak var delegate: PrimeiraCelulaModelCallBack?
+    open weak var delegate: Card1ModelCallBack? 
     
+    //Identifier da célula de reuso.
     var reuseIdentifier: String {
-        return "PrimeiraCelulaModelCellIdentifier"
+        
+        return "Card1ModelCellIdentifier"
     }
     
     //variáveis de inicialização
-    var tituloCard : String
+    var tituloCard: String
     
+    //Montando a célula modelo
     func cellForTableView(tableView: UITableView, atIndexpath indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier,for: indexPath) as? PrimeiraCelulaModelCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? Card1ModelCell {
             
-            //Inicializando a célula (design, values etc)
+            //Inicializando a célula (design, values etc...) atributos declarados na 'modelCell
             cell.setupDesign()
             
             cell.setupValues(tituloCard: tituloCard)
             
-            //Adicionando cliques
+            //Adicionando cliques no cardView
             cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(acaoCliqueCardView)))
             
             return cell
             
         }else{
-            
-            print("teste")
-            
-            return UITableViewCell()
+    
+        return UITableViewCell()
             
         }
+        
     }
     
     @objc func acaoCliqueCardView (sender: UITapGestureRecognizer) {
+        
         delegate?.acaoCliqueCard()
+        
     }
     
     

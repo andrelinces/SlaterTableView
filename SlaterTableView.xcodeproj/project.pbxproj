@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32BE0AE27191300004DE73A /* Card1DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32BE0AD27191300004DE73A /* Card1DataSource.swift */; };
 		D3D56E72271630D2006E14EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56E71271630D2006E14EE /* AppDelegate.swift */; };
 		D3D56E74271630D2006E14EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56E73271630D2006E14EE /* SceneDelegate.swift */; };
 		D3D56E76271630D2006E14EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56E75271630D2006E14EE /* ViewController.swift */; };
@@ -20,9 +21,14 @@
 		D3D56E9727163D50006E14EE /* PrimeiraCelulaModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56E9627163D50006E14EE /* PrimeiraCelulaModelCell.swift */; };
 		D3D56E9927163D60006E14EE /* PrimeiraCelulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56E9827163D60006E14EE /* PrimeiraCelulaModel.swift */; };
 		D3D56E9B2716455B006E14EE /* GlobalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56E9A2716455B006E14EE /* GlobalExtension.swift */; };
+		D3D56EA227185B29006E14EE /* Card1ModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D56EA127185B29006E14EE /* Card1ModelCell.xib */; };
+		D3D56EA427185B57006E14EE /* Card1ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56EA327185B57006E14EE /* Card1ModelCell.swift */; };
+		D3D56EA627185B6F006E14EE /* Card1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56EA527185B6F006E14EE /* Card1Model.swift */; };
+		D3D56EA82718E963006E14EE /* Card1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D56EA72718E963006E14EE /* Card1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D32BE0AD27191300004DE73A /* Card1DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1DataSource.swift; sourceTree = "<group>"; };
 		D3D56E6E271630D2006E14EE /* SlaterTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlaterTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D56E71271630D2006E14EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D56E73271630D2006E14EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,10 @@
 		D3D56E9627163D50006E14EE /* PrimeiraCelulaModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeiraCelulaModelCell.swift; sourceTree = "<group>"; };
 		D3D56E9827163D60006E14EE /* PrimeiraCelulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeiraCelulaModel.swift; sourceTree = "<group>"; };
 		D3D56E9A2716455B006E14EE /* GlobalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExtension.swift; sourceTree = "<group>"; };
+		D3D56EA127185B29006E14EE /* Card1ModelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Card1ModelCell.xib; sourceTree = "<group>"; };
+		D3D56EA327185B57006E14EE /* Card1ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1ModelCell.swift; sourceTree = "<group>"; };
+		D3D56EA527185B6F006E14EE /* Card1Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1Model.swift; sourceTree = "<group>"; };
+		D3D56EA72718E963006E14EE /* Card1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +137,7 @@
 		D3D56E8C27163A4C006E14EE /* Principal */ = {
 			isa = PBXGroup;
 			children = (
+				D3D56E9D271859E1006E14EE /* Card 1 */,
 				D3D56E8D27163A65006E14EE /* RootViewController */,
 			);
 			path = Principal;
@@ -158,6 +169,26 @@
 				D3D56E9827163D60006E14EE /* PrimeiraCelulaModel.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D3D56E9D271859E1006E14EE /* Card 1 */ = {
+			isa = PBXGroup;
+			children = (
+				D3D56E9F27185A47006E14EE /* TableView */,
+				D3D56EA72718E963006E14EE /* Card1ViewController.swift */,
+				D32BE0AD27191300004DE73A /* Card1DataSource.swift */,
+			);
+			path = "Card 1";
+			sourceTree = "<group>";
+		};
+		D3D56E9F27185A47006E14EE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D3D56EA127185B29006E14EE /* Card1ModelCell.xib */,
+				D3D56EA327185B57006E14EE /* Card1ModelCell.swift */,
+				D3D56EA527185B6F006E14EE /* Card1Model.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D56E9527163D3F006E14EE /* PrimeiraCelulaModelCell.xib in Resources */,
+				D3D56EA227185B29006E14EE /* Card1ModelCell.xib in Resources */,
 				D3D56E7E271630D4006E14EE /* LaunchScreen.storyboard in Resources */,
 				D3D56E7B271630D4006E14EE /* Assets.xcassets in Resources */,
 				D3D56E79271630D2006E14EE /* Main.storyboard in Resources */,
@@ -239,7 +271,11 @@
 				D3D56E72271630D2006E14EE /* AppDelegate.swift in Sources */,
 				D3D56E9B2716455B006E14EE /* GlobalExtension.swift in Sources */,
 				D3D56E8A27163381006E14EE /* GlobalProtocol.swift in Sources */,
+				D3D56EA627185B6F006E14EE /* Card1Model.swift in Sources */,
 				D3D56E74271630D2006E14EE /* SceneDelegate.swift in Sources */,
+				D3D56EA82718E963006E14EE /* Card1ViewController.swift in Sources */,
+				D3D56EA427185B57006E14EE /* Card1ModelCell.swift in Sources */,
+				D32BE0AE27191300004DE73A /* Card1DataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

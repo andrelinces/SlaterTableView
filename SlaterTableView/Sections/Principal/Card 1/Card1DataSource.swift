@@ -1,13 +1,13 @@
 //
-//  RootDataSource.swift
+//  Card1DataSource.swift
 //  SlaterTableView
 //
-//  Created by Andre Linces on 12/10/21.
+//  Created by Andre Linces on 14/10/21.
 //
 
 import UIKit
 
-class RootDataSource: NSObject {
+class Card1DataSource: NSObject {
     
     var data = [Any]()
     
@@ -15,22 +15,20 @@ class RootDataSource: NSObject {
         
         tableView.dataSource = self
         
-        tableView.register(UINib(nibName: "PrimeiraCelulaModelCell", bundle: Bundle.main), forCellReuseIdentifier: "PrimeiraCelulaModelCellIdentifier")
+        tableView.register(UINib(nibName: "Card1ModelCell", bundle: Bundle.main), forCellReuseIdentifier: "Card1ModelCellIdentifier")
     }
-    
 }
 
-
-extension RootDataSource: UITableViewDataSource {
+extension Card1DataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return data.count
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let primeiraCelulaModel = data[indexPath.row] as? PrimeiraCelulaModel {
+        if let card1Model = data[indexPath.row] as? Card1Model {
             
-            return primeiraCelulaModel.cellForTableView(tableView: tableView, atIndexpath: indexPath)
+            return card1Model.cellForTableView(tableView: tableView, atIndexpath: indexPath)
             
         }else {
             
@@ -38,4 +36,6 @@ extension RootDataSource: UITableViewDataSource {
         }
         
     }
+    
 }
+

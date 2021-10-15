@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Card1ModelCellIdentifier" rowHeight="349" id="eks-SK-uX7" customClass="Card1ModelCell" customModule="SlaterTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="552" height="349"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eks-SK-uX7" id="kY0-xr-duC">
+                <rect key="frame" x="0.0" y="0.0" width="552" height="349"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g87-G3-Oeb">
+                        <rect key="frame" x="0.0" y="0.0" width="552" height="349"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2S2-OG-4Wy" userLabel="Card View">
+                                <rect key="frame" x="12" y="16" width="528" height="317"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Titulo Card 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fk-YF-Y2i">
+                                        <rect key="frame" x="135" y="140.5" width="258" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1Fk-YF-Y2i" firstAttribute="centerY" secondItem="2S2-OG-4Wy" secondAttribute="centerY" id="YJf-F0-M39"/>
+                                    <constraint firstItem="1Fk-YF-Y2i" firstAttribute="centerX" secondItem="2S2-OG-4Wy" secondAttribute="centerX" id="qQF-q0-b97"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2S2-OG-4Wy" firstAttribute="leading" secondItem="g87-G3-Oeb" secondAttribute="leading" constant="12" id="Fri-h2-mBa"/>
+                            <constraint firstAttribute="bottom" secondItem="2S2-OG-4Wy" secondAttribute="bottom" constant="16" id="Mx8-rl-Cey"/>
+                            <constraint firstAttribute="height" constant="349" id="Pa3-qg-xIe"/>
+                            <constraint firstAttribute="trailing" secondItem="2S2-OG-4Wy" secondAttribute="trailing" constant="12" id="W8l-TS-Bg4"/>
+                            <constraint firstItem="2S2-OG-4Wy" firstAttribute="top" secondItem="g87-G3-Oeb" secondAttribute="top" constant="16" id="ebS-yt-vND"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="g87-G3-Oeb" firstAttribute="leading" secondItem="kY0-xr-duC" secondAttribute="leading" id="8qa-cs-Y6F"/>
+                    <constraint firstAttribute="trailing" secondItem="g87-G3-Oeb" secondAttribute="trailing" id="flD-zJ-CdC"/>
+                    <constraint firstAttribute="bottom" secondItem="g87-G3-Oeb" secondAttribute="bottom" id="iZp-7c-K3W"/>
+                    <constraint firstItem="g87-G3-Oeb" firstAttribute="top" secondItem="kY0-xr-duC" secondAttribute="top" id="xsX-W0-Mfz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cardView" destination="2S2-OG-4Wy" id="3Uq-Ky-f4y"/>
+                <outlet property="labelTituloCard1" destination="1Fk-YF-Y2i" id="8Cu-ha-dwV"/>
+            </connections>
+            <point key="canvasLocation" x="123.18840579710145" y="42.522321428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
