@@ -17,11 +17,9 @@ class PrincipalRootViewController: UIViewController, PrimeiraCelulaModelCallBack
         //let testeRecupera = dataSource.data.description
         //let recuperatable = tableView.indexPathForSelectedRow
         //print(recuperatable)
-        
-        
+          
     }
     
-
     @IBOutlet weak var tableView: UITableView!
     
     let dataSource = RootDataSource()

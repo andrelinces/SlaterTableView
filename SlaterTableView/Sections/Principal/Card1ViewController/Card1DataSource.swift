@@ -15,7 +15,12 @@ class Card1DataSource: NSObject {
         
         tableView.dataSource = self
         
+        //Registrando as cards, células
         tableView.register(UINib(nibName: "Card1ModelCell", bundle: Bundle.main), forCellReuseIdentifier: "Card1ModelCellIdentifier")
+        
+        tableView.register(UINib(nibName: "Card2ModelCell", bundle: Bundle.main), forCellReuseIdentifier: "Card2ModelCellIdentifier")
+        
+        tableView.register(UINib(nibName: "Card3ModelCell", bundle: Bundle.main), forCellReuseIdentifier: "Card3ModelCellIdentifier")
     }
 }
 
@@ -30,7 +35,15 @@ extension Card1DataSource: UITableViewDataSource {
             
             return card1Model.cellForTableView(tableView: tableView, atIndexpath: indexPath)
             
-        }else {
+        }else if let card2Model = data[indexPath.row] as? Card2Model {
+            
+            return card2Model.cellForTableView(tableView: tableView, atIndexpath: indexPath)
+            
+        }else if let card3Model = data[indexPath.row] as? Card3Model {
+            
+            return card3Model.cellForTableView(tableView: tableView, atIndexpath: indexPath)
+            
+        }else{
             
             return UITableViewCell()
         }

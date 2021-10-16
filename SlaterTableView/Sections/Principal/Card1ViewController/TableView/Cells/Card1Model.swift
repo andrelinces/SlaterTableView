@@ -19,7 +19,7 @@ class Card1Model: tableViewCompatible {
         self.tituloCard = tituloCard
     }
     
-    open weak var delegate: Card1ModelCallBack? 
+    open weak var delegate: Card1ModelCallBack?
     
     //Identifier da célula de reuso.
     var reuseIdentifier: String {
