@@ -9,7 +9,7 @@ import UIKit
 
 protocol PrimeiraCelulaModelCallBack: class {
     
-    func acaoCliqueCard ()
+    func acaoCliqueCard (indexPath: IndexPath)
     
 }
 
@@ -38,7 +38,10 @@ class PrimeiraCelulaModel: tableViewCompatible {
             cell.setupValues(tituloCard: tituloCard)
             
             //Adicionando cliques
-            cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(acaoCliqueCardView)))
+            let gestureCliqueCard = myTapCustom(target: self, action: #selector(acaoCliqueCardView))
+            gestureCliqueCard.indexPath = indexPath
+            
+            cell.cardView.addGestureRecognizer(gestureCliqueCard)
             
             return cell
             
@@ -51,8 +54,14 @@ class PrimeiraCelulaModel: tableViewCompatible {
         }
     }
     
-    @objc func acaoCliqueCardView (sender: UITapGestureRecognizer) {
-        delegate?.acaoCliqueCard()
+    @objc func acaoCliqueCardView (sender: myTapCustom) {
+        delegate?.acaoCliqueCard(indexPath: sender.indexPath!)
+    }
+    
+    class myTapCustom: UITapGestureRecognizer {
+        
+        var indexPath: IndexPath?
+        
     }
     
     

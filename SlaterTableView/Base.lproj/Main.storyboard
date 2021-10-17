@@ -35,11 +35,43 @@
                     <connections>
                         <outlet property="tableView" destination="Xey-cc-hSn" id="d3Q-wc-wEu"/>
                         <segue destination="jCz-yO-Wgv" kind="show" identifier="segueCard1" id="OP8-9k-F0r"/>
+                        <segue destination="dco-5g-ykr" kind="show" identifier="segueCard2" id="QPF-oN-RWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3029" y="78"/>
+        </scene>
+        <!--Card2 View Controller-->
+        <scene sceneID="bF2-YE-lD4">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="dco-5g-ykr" customClass="Card2ViewController" customModule="SlaterTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vf3-J3-pWv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nCW-N3-6cQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sDt-kb-Mcu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nCW-N3-6cQ" firstAttribute="trailing" secondItem="Vf3-J3-pWv" secondAttribute="trailing" id="6xJ-hB-qSj"/>
+                            <constraint firstItem="nCW-N3-6cQ" firstAttribute="leading" secondItem="Vf3-J3-pWv" secondAttribute="leading" id="b5m-Ln-roW"/>
+                            <constraint firstItem="nCW-N3-6cQ" firstAttribute="bottom" secondItem="Vf3-J3-pWv" secondAttribute="bottom" constant="-34" id="ifN-bw-vFl"/>
+                            <constraint firstItem="nCW-N3-6cQ" firstAttribute="top" secondItem="Vf3-J3-pWv" secondAttribute="top" constant="44" id="wTu-3Q-vmE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fp3-XM-h6i"/>
+                    <connections>
+                        <outlet property="tableView" destination="nCW-N3-6cQ" id="qza-de-cK4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agV-xf-yHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3901.449275362319" y="418.52678571428572"/>
         </scene>
         <!--Card1 View Controller-->
         <scene sceneID="T5x-fx-5a1">
@@ -70,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RP0-hu-55Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3933" y="87"/>
+            <point key="canvasLocation" x="3886" y="-256"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xpa-h4-bKd">

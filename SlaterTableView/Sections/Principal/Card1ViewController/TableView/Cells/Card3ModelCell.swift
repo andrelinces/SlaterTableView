@@ -32,7 +32,5 @@ class Card3ModelCell: UITableViewCell {
         imageViewCard3 = imageCard3
         
     }
-    
-    
-    
+      
 }

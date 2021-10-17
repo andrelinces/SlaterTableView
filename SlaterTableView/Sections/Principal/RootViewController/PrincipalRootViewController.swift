@@ -10,10 +10,20 @@ import UIKit
 class PrincipalRootViewController: UIViewController, PrimeiraCelulaModelCallBack {
   
     //Protocolos das celulas
-    func acaoCliqueCard() {
+    func acaoCliqueCard(indexPath: IndexPath) {
         print("clicou no card")
         //Vou tentar enviar para uma nova tela
-        performSegue(withIdentifier: "segueCard1" , sender: nil)
+        
+        
+        if indexPath.row == 0 {
+            
+            performSegue(withIdentifier: "segueCard1" , sender: nil)
+            
+        }else if indexPath.row == 1 {
+            
+            performSegue(withIdentifier: "segueCard2" , sender: nil)
+        }
+        
         //let testeRecupera = dataSource.data.description
         //let recuperatable = tableView.indexPathForSelectedRow
         //print(recuperatable)
