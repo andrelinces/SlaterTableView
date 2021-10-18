@@ -34,14 +34,23 @@ class Card2ViewController: UIViewController, Card1ModelCallBack, Card2ModelCallB
         setupTableView()
         
     }
-    
+    //var nomeFilme = UIImage(named: "filme1")
     func setupTableView () {
         
-        let card4 = Card4Model(delegate: self, tituloCard4: "Card4 - Filme", descricaoCard4: "007 - Segundo Filme da nova série", imageCard4: UIImage.init(systemName: "video.fill")!)
+        let card4 = Card4Model(delegate: self, tituloCard4: "Card4 - Filme", descricaoCard4: "007 - Segundo Filme da nova série", imageCard4:  "filme1")
+        
+        let card5 = Card4Model(delegate: self, tituloCard4: "Card4 - Filme", descricaoCard4: "007 - Segundo Filme da nova série", imageCard4:  "filme2")
         
         //let card3 = Card3Model(delegate: self, tituloCard3: "Card3 teste", imageCard3: UIImage.init(systemName: "person")!)
         
         dataSourceCard2.data.append(card4)
+        dataSourceCard2.data.append(card5)
+        dataSourceCard2.data.append(card4)
+        dataSourceCard2.data.append(card5)
+        dataSourceCard2.data.append(card4)
+        dataSourceCard2.data.append(card5)
+        dataSourceCard2.data.append(card4)
+        dataSourceCard2.data.append(card5)
         
         tableView.allowsSelection = false
         

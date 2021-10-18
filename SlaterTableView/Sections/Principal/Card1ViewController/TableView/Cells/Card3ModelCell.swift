@@ -11,7 +11,8 @@ class Card3ModelCell: UITableViewCell {
     
     @IBOutlet weak var card3View: UIView!
     @IBOutlet weak var labelTituloCard3: UILabel!
-    @IBOutlet weak var imageViewCard3: UIImage!
+    @IBOutlet weak var labelDescricaoCard3: UILabel!
+    @IBOutlet weak var imageViewCard3: UIImageView!
     
     //Método para o design do card3
     func setupDesign () {
@@ -21,15 +22,16 @@ class Card3ModelCell: UITableViewCell {
     }
     
     //Método para o Título da card3, Label
-    func setupValues (tituloCard3: String) {
+    func setupValues (tituloCard3: String, descricaoCard3: String) {
         
         labelTituloCard3.text = tituloCard3
+        labelDescricaoCard3.text = descricaoCard3
         
     }
     
-    func setupImage (imageCard3: UIImage ) {
+    func setupImage (imageCard3: String ) {
         //let imageView =
-        imageViewCard3 = imageCard3
+        imageViewCard3.image = UIImage(named: imageCard3)
         
     }
       

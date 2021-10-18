@@ -42,7 +42,17 @@ class Card1ViewController: UIViewController, Card1ModelCallBack, Card2ModelCallB
         
         let card2teste = Card2Model(delegate: self, tituloCard2: "Card2")
         
-        let card3 = Card3Model(delegate: self, tituloCard3: "Card3-Personal", imageCard3: UIImage.init(systemName: "person")!)
+        let card3 = Card3Model(delegate: self, tituloCard3: "teste", imageCard3: "filme2")
+        
+        let card4 = Card3Model(delegate: self, tituloCard3: "teste", imageCard3: "filme2")
+        
+        let card5 = Card3Model(delegate: self, tituloCard3: "teste", imageCard3: "filme2")
+        
+        let card6 = Card3Model(delegate: self, tituloCard3: "teste", imageCard3: "filme1")
+        
+        let card7 = Card3Model(delegate: self, tituloCard3: "teste", imageCard3: "filme1")
+        
+        let card8 = Card3Model(delegate: self, tituloCard3: "teste", imageCard3: "filme2")
         
         //Inserindo card2, porém utilizando o datasource1 do card1
         dataSourceCard1.data.append(card2teste)
@@ -50,6 +60,12 @@ class Card1ViewController: UIViewController, Card1ModelCallBack, Card2ModelCallB
         dataSourceCard1.data.append(card1)
         
         dataSourceCard1.data.append(card3)
+        dataSourceCard1.data.append(card4)
+        dataSourceCard1.data.append(card5)
+        dataSourceCard1.data.append(card6)
+        dataSourceCard1.data.append(card7)
+        dataSourceCard1.data.append(card8)
+        
         
         tableView.allowsSelection = false
         

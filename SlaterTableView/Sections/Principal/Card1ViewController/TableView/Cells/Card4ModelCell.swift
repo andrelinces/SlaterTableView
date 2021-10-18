@@ -11,8 +11,10 @@ class Card4ModelCell: UITableViewCell {
     
     @IBOutlet weak var card4View: UIView!
     @IBOutlet weak var labelTitulocard4: UILabel!
-    @IBOutlet weak var imageViewCard4: UIImage!
+    @IBOutlet weak var imageViewCard4: UIImageView!
     @IBOutlet weak var labelDescricaoCard4: UILabel!
+    
+    
     
     func setupDesign () {
         
@@ -27,11 +29,17 @@ class Card4ModelCell: UITableViewCell {
         
     }
     
-    func setupImage (imageCard4: UIImage) {
+   
+    
+    func setupImage (imageCard4 : String) {
+//        var imageCard4: UIImageView
+//        imageCard4 = UIImageView(image: UIImage(named: "filme1"))
+       // imageViewCard4 = UIImageView(image: UIImage(named: "filme1"))
+        //imageViewCard4 = imageCard4
         
-        imageViewCard4 = imageCard4
+        imageViewCard4.image = UIImage(named: imageCard4)
         
     }
-    
+   
     
 }
